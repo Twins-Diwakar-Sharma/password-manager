@@ -1,0 +1,116 @@
+	html {
+            background-repeat: no-repeat;
+            background-size:cover;
+            height:100%;
+            width:100%;
+            background: radial-gradient(
+           		circle at 50% 50%,
+	          	#014446,#111121);
+        }
+        body{
+          background: none;
+        }
+		
+		.codered {display : none;}
+
+		.codeblue {display : block;}
+		
+	.codered > input[type=text] {
+	   width: 40%;
+	   height: 5%;
+	   margin-left: 10%;
+	   border: 1px solid #993220;
+	   background: none;
+	   color: #ff0000;	
+           -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	   transform: skew(-20deg);
+	}	
+	
+	.codered > input[type=text]:focus {
+	   outline: none;	
+	}
+	.codered > input[type=text]::placeholder {
+	   color: #dd0000;
+	}
+	.codered > input[type=button], .codered > input[type=submit] {
+	   width: 5%;
+	   height: 5%;
+	   border: 1px solid #dd0010;
+	   background: #dd0010;
+	   color: #000000;	
+           -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	   transform: skew(-20deg);
+	}
+	.codered > input[type=button]:focus, .codered > input[type=submit]:focus {
+	   outline: none;
+	}
+	.codered > input[type=button]:hover, .codered > input[type=submit]:hover {
+	   background: #ff5030;	
+	   border-color: #ff5030;
+	}
+
+	.tronDivFadded{
+	   width: 40%;
+	   height: 4%;
+	   margin-left: 30%;
+	   border: 1px solid #008659;
+	   background: none;
+	   color: #008659;	
+     -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	   transform: skew(-20deg);
+	   padding-top: 0.2%;
+	   padding-left: 0.5%;
+	}
+
+	.tronDiv{
+	   width: 40%;
+	   height: 4%;
+	   margin-left: 30%;
+	   border: 2px solid #2cd6b9;
+	   background: none;
+	   color: #2cd6b9;	
+     -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	   transform: skew(-20deg);
+	   padding-top: 0.2%;
+	   padding-left: 0.5%;
+	}
+	
+	.codeblue > input[type=text] {
+	   width: 40%;
+	   height: 5%;
+	   margin-left: 10%;
+	   border: 2px solid #2cd6b9;
+	   background: none;
+	   color: #2cd6b9;	
+           -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	   transform: skew(-20deg);
+	}
+	
+	.codeblue > input[type=text]:focus {
+	   outline: none;	
+	}
+	.codeblue > input[type=text]::placeholder {
+	   color: #2cd6b9;
+	}
+	.codeblue > input[type=button], .codeblue > input[type=submit] {
+	   width: 5%;
+	   height: 5%;
+	   border: 1px solid #2cd6b9;
+	   background: #2cd6b9;
+	   color: none;	
+           -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	   transform: skew(-20deg);
+	}
+	.codeblue > input[type=button]:focus, .codeblue > input[type=submit]:focus {
+	   outline: none;
+	}
+	.codeblue > input[type=button]:hover, .codeblue > input[type=submit]:hover {
+	   background: #acf8f9;	
+	}
+	

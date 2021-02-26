@@ -1,0 +1,37 @@
+<html id="ht">
+
+  <head>
+    <title> password manager </title> 
+    <link rel="stylesheet" href="../css/passMan.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> 
+    <script src="../js/passMan.js"></script>
+  </head>
+  
+  <body>
+      <br> <br><br><br>
+	 
+	<div id="wasted" class="codered">
+	 <input type="button"  value="EDIT" onClick="change()">
+			<input type="text" placeholder="url" name="redLink" id="redlink" autocomplete="off"> 
+		<br> <br> <br>
+			<input type="text" placeholder="password" name="redPass" id="redPass" autocomplete="off" style = "margin-left: 30%";> 
+		<br> <br> <br> <br> 
+			<input type="button" value="NEW"  style = "margin-left: 20%" onClick="newRed(1)" onMouseEnter="newRed(0)" onMouseLeave="defBrown()">
+			<input type="button" value="UPDATE"  style = "margin-left: 20%" onClick="upOrange(1)"  onMouseEnter="upOrange(0)" onMouseLeave="defBrown()">
+			<input type="button" value="DELETE"  style = "margin-left: 20%" onClick="delPurple(1)"  onMouseEnter="delPurple(0)" onMouseLeave="defBrown()">
+		<br> <br> <br> <br> <br> 
+	</div>
+	
+    <div id="notwasted" class="codeblue">
+     	<input type="button"  value="GET" onClick="change()">
+			<input type="text" placeholder="url" name="link" id="link" autocomplete="off">  
+			<input type="button" value=">>"  onClick="postFetch()">
+		<br> <br> <br>
+			<div id="output" class="tronDivFadded" > </div>
+		<br> <br> <br> <br> <br>
+	</div>
+  
+
+</body>
+
+</html>

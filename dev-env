@@ -1,0 +1,57 @@
+#!/usr/bin/sh
+
+arg1=$1
+arg2=$2
+
+if [[ $arg1 = '' ]]; then
+    echo 'Initializing...'
+    docker-compose up -d
+
+    echo 'Running server...'
+    docker-compose exec -d web npm start
+
+    echo 'All done!'
+fi
+
+if [[ $arg1 = 'init' ]]; then
+    echo 'Building...'
+    docker-compose build
+
+    echo 'Initializing...'
+    docker-compose up -d
+    
+    echo 'Installing node packages...'
+    docker-compose exec web npm i
+
+    echo 'Running migrations...'
+    docker-compose exec web npx sequelize-cli db:migrate
+    
+    echo 'Seeding db...'
+    docker-compose exec web npx sequelize-cli db:seed:all
+    
+    echo 'All done!'
+fi
+
+if [[ $arg1 = 'logs' ]]; then
+    if [[ $arg2 != '' ]]; then
+        docker-compose logs -ft $arg2
+    else 
+        docker-compose logs -ft
+    fi
+fi
+
+if [[ $arg1 = 'stop' ]]; then
+    echo 'Stopping server...'
+    docker-compose down
+fi
+
+if [[ $arg1 = 'bash' ]]; then
+    if [[ $arg2 = '' ]]; then
+        arg2=web
+    fi
+    docker-compose exec $arg2 bash
+fi
+
+if [[ $arg1 = 'db' ]]; then
+    docker-compose exec db mysql -u 'root' -p'root' -h db -A password_manager
+fi
